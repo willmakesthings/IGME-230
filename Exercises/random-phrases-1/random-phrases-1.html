@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- based off of the tutorial on https://webdevtrick.com/responsive-css-flexbox/ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Phrases 1</title>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="newQuote()">
+    <div class="main">
+        <div class="container">
+            <div class="imag"></div>
+            <div class="text-container">
+                <span></span>
+                <h1>WWES?</h1>
+                <h2>( What would Elon say? )</h2>
+                <p>Get the lastest and trending web development project's source code, first see preview if you need then get the code.
+                </p>
+                <a href="https://willmccloskey.design" target="_blank">Created by Will McCloskey</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let quotes = [
+            "When something is important enough, you do it even if the odds are not in your favor.",
+            "If you get up in the morning and think the future is going to be better, it is a bright day. Otherwise, it's not.",
+            "Persistence is very important. You should not give up unless you are forced to give up.",
+            "I think it is possible for ordinary people to choose to be extraordinary.",
+            "I could either watch it happen or be a part of it."
+        ]
+
+        let quote = document.querySelector("p");
+
+        function newQuote() {
+            var i = (Math.random() * quotes.length) | 0;
+            quote.innerText = quotes[i];
+        }
+
+        newQuote();
+    </script>
+
+</body>
+
+
+    
+</html>

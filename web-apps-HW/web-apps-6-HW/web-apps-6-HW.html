@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Web Apps-6</title>
+	<style>
+		body{
+			font-family:sans-serif;
+		}
+		#colorform{
+			background-color:#dfecdf;
+			color: #111;
+			padding:1em;width:400px;
+		}
+		#colorform p#info{
+			background-color:white;
+			color: black;
+			width:300px;
+			height:100px;
+			padding:.5em;
+		}
+		
+		#colorform legend{ 
+			font-weight:bold;
+			font-size:1.2em;
+		}
+	</style>
+</head>
+<body>
+
+<div id="colorform">
+	<legend>Choose your favorite color!</legend>
+	<p><input type="radio" name="colorGroup" class="colorGroup" value="red" /> Red</p>
+	<p><input type="radio" name="colorGroup" class="colorGroup" value="green" /> Green</p>
+	<p><input type="radio" name="colorGroup" class="colorGroup" value="blue" /> Blue</p>
+	<p><button id="colorButton" type="button">Submit</button></p>
+	<p id="info"></p>
+</div>
+
+<script>
+/* Write you code here! */
+        
+    colorButton.addEventListener("click", buttonEvent);
+    
+    let radios = document.querySelectorAll(".colorGroup");
+    
+    for(let e of radios){
+        e.addEventListener("change", radioEvent);
+    }
+    
+    function buttonEvent(){
+        document.querySelector("legend").style.color = checkedValue();
+        
+        info.innerHTML = "Your FINAL CHOICE is " + '"' + checkedValue() + '"' + "!" ;
+    }
+    
+    function radioEvent(e){
+           info.innerHTML = "You have selected " + '"' + e.target.value + '"' + "!";
+    }
+    
+    function checkedValue(){
+        for(let f of radios){
+            if(f.checked){
+                return f.value;
+            }
+        }
+    }
+    
+</script>
+</body>
+</html>

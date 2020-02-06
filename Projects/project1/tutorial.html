@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>How to 3D Print</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+    
+<body>
+    
+    <nav class='main-nav'>
+        <img src="images/3d.svg" id="icon" alt="cube icon">
+        <div class="nav-content">
+               <a href="tutorial.html"><p style="color: black">Article</p></a>
+                <a href=""><p>Other things</p></a>
+            </div>
+        <a href="index.html" id="home">Home</a>
+    </nav>
+    
+    <div class="sidenav">
+            <a href="#getting_started">Getting Started</a>
+            <a href="#load_slicer">Load into Slicer</a>
+            <a href="#slice_it">Slice it</a>
+            <a href="#send_to_print">Send to print</a>
+            <a href="#watch_it_go">Watch it go</a>
+            <a href="#collect_your_print">Collect your print</a>
+        </div>
+    
+    <div class='page'>
+        
+        
+        <header>
+                <h1 class="heading">How to 3D Print</h1>
+                <div class='subheading'>A tutorial on the world's favorite rapid prototyping tool</div>
+        </header>
+        
+        <div class="image-wrapper">
+        
+            <img src="images/3dprinter-desk.jpg" alt="3D printed objects on desk">
+        
+        </div>
+
+        
+        <div class='content' id="intro">
+
+                <p>3D printing, or additive manufacturing, is a process of making solid objects form a digital file. The machines that do this are a subset of CNC machines, known commonly as 3D printers! 
+            
+                The creation of a 3D object is done by layering material, frequently hot plastic, on top of itself over and over in a precise path to form objects. </p>
+
+        </div>
+        
+        <div class="image-wrapper">
+        
+            <img src="images/benchy1.jpg" alt="3D printed boat">
+        
+        </div>
+
+        <div class='content' id="getting_started">
+            
+                <h2>Getting Started</h2>
+
+                <p>First we need to find or create a model to 3D print! 
+                These can range from useful objects to use around the house to pieces of art or even accesories! 3D printing is extremely versatile, and is limited mostly by your imagination!</p>
+
+
+                <p>There are some great resources for finding these models, some of my favorites being <a href="https://www.thingiverse.com/">Thingiverse</a> and <a href="https://cults3d.com/en">cults3D</a>. There are plenty of others out there, these just happen to have a large community, and some great models! You could also model your own part, using software like <a href="https://www.tinkercad.com/">Tinkercad</a> or more advanced CAD software like <a href="https://www.autodesk.com/products/fusion-360/overview">Fusion360</a> but for a beginner, it's always nice to start with someone else's model.</p>
+
+                <p>Today I'll be using the popular <a href="http://www.3dbenchy.com/">"3DBenchy" model</a>, which is commonly used as a benchmark for your printer's calibration, and a great starting point for beginners.</p>
+
+            
+        </div>
+        
+        <div class="image-wrapper">
+        
+            <img src="images/cura.png" alt="screenshot of Cura software">
+        
+        </div>
+        
+        <div class='content' id="load_slicer">
+            
+                <h2>Load into Slicer</h2>
+
+                <p>3D printers often require a bit of fine tuning, and print results can change from material to material. Try out a benchy and see if anything needs to be changed from the default settings.</p>
+
+
+                <p>Since I'm printing on my Ultimaker S5, I'll use Ultimaker's Cura software. Cura has a lot of great features, but there are all sorts of alternative slicers like Simplify3D and Slic3r.</p>
+
+                <p>I can simply drag the downloaded Benchy.stl file into Cura, and see the little model pop onto the virtual build plate! Positioning can be important for reducing the amount of supports and potential for failure, but luckily for benchy, he was designed to be printed without them!</p>
+
+            
+        </div>
+        
+        <div class="image-wrapper">
+        
+            <img src="images/sliced.png" alt="Cura slicing model">
+        
+        </div>
+        
+        <div class='content' id="slice_it">
+            
+                <h2>Slice it</h2>
+
+                <p>Select the resolution you want the print to run at and then hit slice! Smaller resolutions will make the print much longer, but will also reduce the visibility of the layer lines.</p>
+
+
+                <p>Since I want this benchy to print a bit faster, I'll slice it at a standard 0.15mm layer height without supports, and a brim to make sure it sticks to the print bed (frequently PLA prints can get unstuck from the bed and cause a print failure. A simple solution to this is actually just a glue stick!) You can check the "Preview" screen in cura to see the generated layers, and watch a simulation of the print before you send it off.</p>
+
+                <p>You can also use the Preview screen to check for potential problem areas, like large overhangs or gaps that could be hard to cross without supports. Double check to make sure everything is good to go, and you'll be ready to send it to print!</p>
+
+            
+        </div>
+        
+        <div class='content' id="send_to_print">
+            
+                <h2>Sending to Print</h2>
+
+                <p>On some newer printers and more expensive printers printing a model can be as simple as slicing and sending the generated gcode over wifi to the printer, but most of the time a physical drive will have to be used. These are most often just simple USB drives or microSD drives that you save the generated file to, and plug back into the printer. </p>
+
+
+                <p>In the case of a physical drive, make sure to select the correct file on the printer's interface and double check for anything that might get cause a failure, like a clogged print nozzle or some rogue plastic on the bed from a previous print. If everything is good to go, simply press "Print" and watch the magic happen!</p>
+
+            
+        </div>
+        
+        <div class="image-wrapper">
+        
+            <img src="images/in-progress.jpg"    alt="3D print in progress">
+        
+        </div>
+        
+        <div class='content' id="watch_it_go">
+            
+                <h2>Watch it go</h2>
+
+                <p>The printer will first preheat the extruder nozzle and bed to make sure both are up to temperature, and will home the X, Y, and Z axis while doing this. Once they've preheated, the printer will move into position and begin printing!</p>
+
+
+                <p>Now's the time to sit back and relax, maybe go watch Thor Ragnarok again. Be sure to check on your print every now and then though, just to make sure everything is going smoothly. Failures can happen on even the best, most well-calibrated machines, especially on large prints, so keep an eye out!</p>
+
+                <p>The estimates provided by your slicing software are frequently inaccurate, but you should be able to find a completed 3D printed object within an hour or two of the estimated print time!</p>
+
+            
+        </div>
+        
+        <div class="image-wrapper">
+        
+            <img src="images/finished-benchy.jpg" alt="Finished 3D printed model of a boat">
+        
+        </div>
+        
+        <div class='content' id="collect_your_print">
+            
+                <h2>Collect your print!</h2>
+
+                <p>Once your print has finished, the bed will fall back down to its home position, and you'll be able to collect your finished model! Depending on how stuck to the print bed your part is, you may have to use some external tools to help pry it off. Be careful with these though, they're sharp!</p>
+
+
+                <p>After you've removed the completed part, be sure to use light pressure or some pliers to remove any supports or brim materials that might still be stuck on it. Some sanding may also be required to get the part to a finished state, but it all depends on your desired outcome!</p>
+
+                <p>Congratulations! You get to admire your brand new 3D printed part, and think of what other amazing ideas you can make in the future. Happy printing!</p>
+
+            
+        </div>
+
+    </div>
+    
+    <footer>
+        <p>Created by Will McCloskey | IGME-230 | 2019</p>
+    </footer>
+
+
+</body>
+
+</html>

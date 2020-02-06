@@ -1,0 +1,149 @@
+* {
+  transition: .33s ease all;
+  box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+html {
+  font-family: 'Space Mono', monospace;
+  box-sizing: border-box;
+}
+span {
+  display: inline-block;
+  width: 50px;
+  height: 5px;
+  background-color: #FFF600;
+  margin-bottom: 30px;
+}
+div.main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+    
+}
+div.container {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 60px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+  border-radius: 10px;
+  border: white 2px;
+}
+ 
+imag {
+  width: 100%;
+  border-radius: 10px 0px 0px 10px;
+}
+h1 {
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0 0 15px;
+  color: white;
+}
+h2{
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 0 15px;
+  color: white;
+}
+p {
+  font-weight: 300;
+  line-height: 24px;
+  margin: 0;
+    color: white;
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFF600;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  padding: 5px;
+  left: -5px;
+}
+a:hover {
+  color: #FFF600;
+}
+a::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: calc(50%);
+  left: 0;
+  width: 100%;
+  height: 40%;
+  pointer-events: none;
+  background:   grey;
+  transform: scale3d(0, 1, 1);
+  transform-origin: 0% 50%;
+  transition: transform 0.33s;
+}
+a:hover::before {
+          transform: scale3d(1, 1, 1);
+          transform-origin: 0% 50%;
+}
+div.imag {
+  height: 300px;
+  width: 100%;
+  background: url("elon.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px 10px 10px 10px;
+}
+div.text-container {
+  margin: 60px 45px 55px;
+}
+@media screen and (min-width: 768px) {
+  div.container {
+    flex-direction: row;
+    width: 100%;
+    margin: 30px;
+  }
+div.imag {
+    height: 420px;
+    min-width: 360px;
+    border-radius: 10px 10px 10px 10px;
+  }
+ div.text-container {
+    margin: 0 120px;
+    max-width: 660px;
+  }
+}
+#elonButton{
+    font-family: 'Space Mono', monospace;
+    box-sizing: border-box;
+    margin: 1rem auto;
+    font-size: 1rem;
+    width: 50%;
+    background-color: white;
+    color: black;
+    border-radius: 10px 10px 10px 10px;
+    outline: none;
+}
+
+#elonButton:hover{
+    color: #FFF600;
+    background-color: black;
+    box-shadow: 2px 3px #FFF600;
+}
+
+#elonButton:active{
+    color: black;
+    background-color: #FFF600;
+}
+
+@media screen and (min-width: 1024px) {
+  div.container {
+    max-width: 1000px;
+  }
+}

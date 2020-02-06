@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    font-family: 'Rubik', sans-serif;
+    max-width: 600px;
+}
+
+h1{
+    margin: 2rem auto;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #CFCFCF;
+}
+
+#suggestion{
+    font-size: 5rem;
+    margin-bottom: 5rem;
+}
+
+#sugDisplay{
+    min-height: 316px;
+}
+
+#newThingButton{
+    margin: 16px 0 2rem 8px;
+}
+
+.card{
+    margin: 1rem 0;
+    background-color: #eee;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+button{
+    font-size: .8rem;
+    font-family: 'Rubik', sans-serif; 
+    border: solid 1px #CFCFCF;
+    border-radius: 4px;
+    background-color: none;
+}
+
+button:focus{
+    border: none;
+}
+
+button:active{
+    border: none;
+    background-color: #CFCFCF;
+}
+
+input{
+    padding: 0;
+}
+
+details p{
+    margin: 8px 0;
+    text-indent: 8px;
+}

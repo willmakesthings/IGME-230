@@ -1,0 +1,33 @@
+body{
+    font-family: "trebuchet ms", tahoma, verdana;
+}
+
+h1{
+    background: #f7f7f7;
+    text-align: center;
+    padding: 0.5em;
+}
+
+h2{
+    font-size: 1.5em;
+}
+
+.galleryimg{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container {
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". . .";
+}
+
+#footer{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5em;
+  width: 50%;
+}

@@ -1,0 +1,295 @@
+@font-face {
+    font-family: 'Eina';
+    src: url("fonts/eina/eina-01-bold.woff2") format("woff2"),
+        url("fonts/eina/eina-01-bold.woff") format("woff"),
+        url("fonts/eina/eina-01-bold.ttf") format("ttf");
+    font-weight: 700;
+    unicode-range: U+000-5FF;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url("fonts/graphik/Graphik-Regular-Web.woff2") format("woff2"),
+        url("fonts/graphik/Graphik-Regular-Web.woff") format("woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display:block;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    
+}
+
+.page{
+    position: relative;
+    min-height: 100vh;
+    margin-top: 12rem;
+    overflow: hidden;
+    grid-row: 2;
+    grid-column: 2/3;
+}
+
+header{
+    grid-column: 2/3;
+    display: block;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.heading{
+    font-family: 'Eina';
+    font-size: 40px;
+    line-height: 52px;
+    color: #0f1215;
+}
+
+.subheading{
+    font-family: 'Graphik';
+    font-size: 28px;
+    line-height: 1.6;
+    color: #4e4e50;
+}
+
+.content{
+    grid-column: 2/3;
+    display: block;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+    font-family:'Graphik';
+    font-size: 20px;
+    line-height: 40px;
+}
+
+p{
+    display: block;
+}
+
+.image-wrapper{
+    grid-column: 2/3;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 58.3333%;   
+}
+
+img{
+    grid-column: 2/3;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+    transition: opacity 500ms ease 0s;
+}
+
+.sidenav {
+  grid-column: 1/2;
+  position: fixed;
+  overflow-x: hidden;
+  top: 33%;
+  opacity: 5%;
+}
+
+.sidenav:hover{
+    opacity: 100%;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Graphik';
+  color: #c7c7c7;
+  display: block;
+}
+
+
+.sidenav a:hover {
+  color: #0f1215;
+}
+
+.main-nav{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: block;
+    position: relative;
+    margin-top: 50px;
+    min-height: 3rem;
+    overflow: visible;
+}
+
+#home{
+    font-family: "Eina";
+    text-decoration: none;
+    font-size: 25px;
+    color: #0f1215;
+    position: absolute;
+}
+
+.main-nav a:hover{
+    color: #c7c7c7;
+}
+
+.main-nav:hover .nav-content{
+    display: block;
+}
+
+#icon{
+    object-fit:contain;
+    object-position: right;
+    text-align: right;
+    margin: 0 0 0 0;
+}
+
+.nav-content {
+  display: none;
+  position: absolute;
+  margin-top: 2rem;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Graphik';
+  color: #c7c7c7;
+}
+
+.nav-content:hover{
+    color: #0f1215;
+}
+
+.nav-content a p{
+    margin-top: 1rem;
+    color: #c7c7c7;
+}
+
+.nav-content a:hover{
+    color: #0f1215;
+}
+
+#homehead, #homesubhead{
+    color: #FFF;
+}
+
+#homecontainer{
+    padding: 7rem;
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/3dprinter-desk.jpg');
+    background-position: center;
+    background-size: cover;
+    max-height: 30rem;
+
+}
+
+#homepage{
+    margin-top: 4rem;
+}
+
+#mainlink{
+    text-decoration: none;
+}
+
+footer{
+    grid-row:3;
+    grid-column: 1/4;
+    text-align: center;
+    background-color: #f7f7f7;
+    min-height: 10rem;
+    padding: 3rem;
+}
+
+footer p{
+    font-size: 15px;
+    font-family: 'Graphik';
+}
+
+.button{
+    font-family: 'Graphik';
+    font-size: 28px;
+    line-height: 1.6;
+    font-weight: bold;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    max-width: 50%;
+    margin: 2rem auto 2rem auto;
+}
+
+.button:hover{
+    background-color: white;
+    color: black;
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) {
+/* Styles */
+    
+    body{
+    grid-template-columns: minmax(3vw, 2fr) minmax(0, 75rem) minmax(3vw, 2fr);
+    }
+    
+    .sidenav{
+        display: none;
+    }
+    
+    img{
+        grid-column: 1/4;
+    }
+    
+    .img-wrapper{
+        grid-column: 1/4;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width: 1024px){
+/* Styles */
+    body{
+    grid-template-columns: minmax(20vw, 2fr) minmax(0, 75rem) minmax(20vw, 2fr);
+    }
+    
+    .sidenav{
+        display: none;
+    }
+    
+    img{
+        grid-column: 1/4;
+    }
+    
+    .img-wrapper{
+        grid-column: 1/4;
+    }
+    
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1024px) {
+/* Styles */
+    body{
+    grid-template-columns: minmax(20vw, 2fr) minmax(0, 75rem) minmax(20vw, 2fr);
+    }
+
+    .sidenav{
+        display: block;
+    }
+}
+

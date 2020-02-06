@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+main {
+    width: 50em;
+    height: calc(100vh - 4em);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+h2{
+    font-weight: 400;
+    margin-bottom: 5rem;
+}
+p{
+    margin-left: .4em;
+    margin-right: .3em;
+    color: grey;
+    font-weight: 300;
+}
+footer{
+    height: 4em;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.searchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+div.searchBar input {
+    width: 60%;
+    padding: 1em;
+    border-radius: 66px;
+    -moz-box-shadow: inset 0 0 7px #BBBBBB;
+    -webkit-box-shadow: inset 0 0 7px #BBBBBB;
+    box-shadow: inset 0 0 7px #BBBBBB;
+    background-color: #F9F9F9;
+}
+details {
+    width: 30%;
+    padding: 1em;
+    border-radius: 33px;
+    -moz-box-shadow: -5px 5px 5px rgba(68,68,68,0.2);
+	-webkit-box-shadow: -5px 5px 5px rgba(68,68,68,0.2);
+	box-shadow: -5px 5px 5px rgba(68,68,68,0.2);
+}
+div.filterOption {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+div.filterOption input {
+    border-radius: 0;
+    padding: 0;
+    width: 2em;
+}
+p.title{
+    margin-right: 1em;
+    color: black;
+}
+
+
+/* Start switch CSS - from w3schools ------------------------ */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 23px;
+  }
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* height: 30px;
+    width: 50px; */
+    background-color: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  input:checked + .slider {
+    background-color: #3FCB79;
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px #3FCB79;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/* End switch CSS - from w3schools --------------------*/
+  

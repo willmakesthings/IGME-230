@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width">
+    <title>Plant Time, baby</title>
+    <link rel="stylesheet" type="text/css" href="plant-finder.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
+</head>
+
+<main>
+    <h1>Welcome to the Plant Finder</h1>
+    <h2>Time to look for plants, baby</h2>
+    <div class="searchBar">
+        <input id = "searchterm" type="text" name="search" placeholder="What plant is on your mind?">
+        <button id="search">Search</button>
+    </div>
+    <details>
+        <summary>Filters</summary>
+        <div class="filterOption"><p class="title">Complete data:</p><p>false</p>
+            <label class="switch">
+                <input type="checkbox" id="completeDataToggle">
+                <span class="slider round"></span>
+            </label><p>true</p>
+         </div>
+        <div class="filterOption"><p class="title">Edible:</p><p>false</p>
+            <label class="switch">
+                <input type="checkbox" id="edibleToggle">
+                <span class="slider round"></span>
+            </label><p>true</p>
+         </div>
+        <div class="filterOption"><p class="title">Fire-resistant:</p><p>false</p>
+            <label class="switch">
+                <input type="checkbox" id="fireToggle">
+                <span class="slider round"></span>
+            </label><p>true</p>
+         </div>
+        <div class="filterOption"><p class="title">Number of Results:</p>
+            <select id="resultsNum" name="resultsNum">
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100000">All</option>
+            </select>
+        </div>
+        
+    </details>
+    <div id="results">
+        <h1 class="results-title">Search results:</h1>
+        <ul id="resultList"></ul>
+    </div>
+    
+    <div class="pop-up-window">
+        <div class="pu-top-info">
+            <div id="pu-close-button"></div>
+          <div id="pu-plant-image"></div>
+            <div class="pu-top-info-text">
+                <p id="pu-id"></p>
+                <h2 id="pu-common-name">Default plant</h2>
+                <p id="pu-science-name"></p>
+                <p id="pu-genus"></p>
+                <p id="pu-family"></p>
+                <p id="pu-division"></p>
+                <p id="pu-class"></p>
+                <p id="pu-duration"></p>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>Powered by Trefle.io – Created by Will McCloskey, Jay Meadowcroft, and Rohan Pawar</p>
+</footer>
+    
+<script src="src/main.js"></script>    
+<script>
+// let list = document.getElementById('resultList');
+// let searchBarContent = document.getElementsByName("search");
+// for(let i=0; i<22;i++){
+//     let listItem = document.createElement("li");
+//     let textNode = document.createTextNode('zoop');
+
+//     listItem.appendChild(textNode);
+//     list.appendChild(listItem);
+// }
+
+</script>
+</html>

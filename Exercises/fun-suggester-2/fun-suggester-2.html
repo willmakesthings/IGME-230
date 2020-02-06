@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  	<title>Fun Suggester 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    <link rel="stylesheet" href="stylesheet.css">   
+        
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet">
+    
+  </head>
+  
+  <body>
+  	<h1>Dan &amp; Will's Fun Suggester</h1>
+      
+    <section id="sugDisplay">
+        <p id="suggestion"></p>
+    </section>
+      
+    <button id="newThingButton">
+        New Suggestion
+    </button>
+    
+    <section class="card">
+        <input id="textInput" placeholder="Add a new suggestion">
+        <button id="sugButton">Add suggestion</button>
+
+        <button id="clearSug">Clear user suggestion</button>
+    </section>
+      
+    <section class="card">
+        <details>
+            <summary>All    Suggestions</summary>
+        </details>
+    </section>
+    
+  </body>
+  
+  <script>
+      //user suggestions don't clear from HTML until page is refreshed
+      //details tag is renamed from All Suggestions to Details when suggestions are added
+      
+  	let funthings = [
+      "Eat a taco",
+      "See a dog",
+      "Waterslide",
+      "Make believe",
+      "Fire one of your employees"
+      ];
+    
+    let usersuggestions = [];
+    
+    let thing = document.querySelector("p");
+    
+    //replaces p with new thing to do
+    function newThing() {
+      var i = (Math.random() * funthings.length) | 0;
+      thing.innerText = funthings[i];
+      //add value to HTML5 Local Storage value
+      localStorage.setItem('newestThing', funthings[i]);
+    }
+    //if local storage value exists, set p to local storage
+    if (localStorage.getItem('newestThing')){
+      thing.innerText = localStorage.getItem('newestThing');
+    }
+    //else generate new thing
+    else{
+      newThing();
+    }
+    
+    newThingButton.onclick = newThing;
+    
+    
+    //adding suggestions
+    function addSuggestion(text){
+    	//let listItem = document.createElement("p");
+      //listItem.innerHTML = text;
+      usersuggestions.push(text);
+      funthings.push(text);
+      localStorage.setItem("usersuggestions", JSON.stringify(usersuggestions));
+      //document.querySelector("details").appendChild(listItem);
+    }
+    
+    function display(){
+      //check for previous usersuggestions
+      if(localStorage.getItem("usersuggestions")){
+       	usersuggestions = JSON.parse(localStorage.getItem("usersuggestions"));
+        console.log(usersuggestions);
+      }
+      funthings = [...new Set([...funthings, ...usersuggestions])];
+      
+      
+      //clear details
+      const details = document.querySelector("details");
+      while (details.firstChild) {
+        details.removeChild(details.firstChild);
+      }
+      
+      //sort funthings
+      funthings.sort(
+        function(a, b) {
+    			if (a.toLowerCase() < b.toLowerCase()) return -1;
+    			if (a.toLowerCase() > b.toLowerCase()) return 1;
+    			return 0;
+  			});
+      
+      //add new suggestions to HTML
+    	for (let entry of funthings){
+      	let listItem = document.createElement("p");
+      	listItem.innerHTML = entry;
+     	document.querySelector("details").appendChild(listItem);
+      }
+    }
+    
+    display();
+    
+    sugButton.onclick = function(){
+      addSuggestion(textInput.value);
+      display();
+    } 
+    
+    clearSug.onclick = function(){
+    	localStorage.setItem("usersuggestions", "");
+      usersuggestions.length = 0;
+      
+      //clear details
+      const details = document.querySelector("details");
+      while (details.firstChild) {
+        details.removeChild(details.firstChild);
+      }
+      
+      display();
+      console.log(usersuggestions);
+        
+       document.location.reload() 
+    }
+    
+  </script>
+
+</html>

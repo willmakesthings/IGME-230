@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #EFEFEF;
+}
+
+#content{
+    background-color: #FFF;
+    padding: 3rem;
+    text-indent: 1em;
+}
+
+h1, h2, h3{
+    font-family: 'Spectral', serif;
+    font-weight: 500;
+    margin-bottom: 1em;
+    
+}
+
+h3{
+    margin-bottom: 0;
+}
+
+
+p{
+    margin-bottom: 1em;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
